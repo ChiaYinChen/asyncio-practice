@@ -11,6 +11,6 @@ def timer(func):
         value = func(*args, **kwargs)
         end_time = time.perf_counter()
         run_time = end_time - start_time
-        print(f'{func.__globals__["__file__"]!r} executed in {run_time:.4f} secs')  # noqa: E501
+        print(f'{func.__globals__["__file__"]!r} finished in {run_time:.2f} secs')  # noqa: E501
         return value
     return wrapper_decorator
